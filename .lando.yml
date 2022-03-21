@@ -1,0 +1,7 @@
+name: pantheon-site-name
+recipe: pantheon
+config:
+  framework: wordpress
+  site: pantheon-site-name
+  id: pantheon-site-id
+  webroot: web
