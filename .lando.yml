@@ -97,21 +97,6 @@ tooling:
     service: appserver
     description: Displays and tails Xdebug logs
     cmd: tail -f /app/lando/logs/xdebug.log
-  env-deploy:
-    service: appserver
-    description: Deploys to test or live remote Pantheon env (deploys code, updates database, imports config and clears caches)
-    cmd:
-      - /app/lando/scripts/env-deploy.sh
-  env-config-import:
-    service: appserver
-    description: Updates database, imports config and clears caches on a remote Pantheon env
-    cmd:
-      - /app/lando/scripts/env-config-import.sh
-  env-search-reindex:
-    service: appserver
-    description: Reindexes search on a remote Pantheon env
-    cmd:
-      - /app/lando/scripts/env-search-reindex.sh
   npm:
     service: node
   node:
