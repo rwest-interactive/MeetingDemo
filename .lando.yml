@@ -1,7 +1,139 @@
-name: pantheon-site-name
+# Lando config file.
+# Uses pantheon recipe: https://docs.lando.dev/config/pantheon.html#getting-started  
+name: meetingdemo
 recipe: pantheon
 config:
   framework: wordpress
-  site: pantheon-site-name
-  id: pantheon-site-id
-  webroot: web
+  site: meetingdemo
+  id: 5d23eef8-e57d-4918-8d39-ec7b0949fb0f
+  web_docroot: true
+  database: pantheon
+  username: pantheon
+  password: pantheon
+  host: database
+  port: 3306
+  via: nginx
+  # Set xdebug to off by default. Enable it with lando xdebug-on.
+  xdebug: false
+  # Disable Pantheon recipe default Solr server.
+  index: false
+  composer_version: "2.2.7"
+  config:
+    # Custom PHP config overrides.
+    php: lando/php-conf/php.ini
+# proxy:
+#   appserver_nginx:
+#     # Add reliable domain. Requires adding to /etc/hosts on local machine to work.
+#     - meetingdemo.lndo.site
+services:
+  appserver:
+    build_as_root:
+      # Configure PHP.
+      # For some reason php.ini keeps being copied as a directory.
+      # To fix this on rebuild where it's already happened, we need to remove the directory.
+      - rm -rf /app/lando/php-conf/php.ini
+      - rm -f /app/lando/php-conf/php.ini
+      - cp /app/lando/php-conf/default.php.ini /app/lando/php-conf/php.ini
+      # Create error logs.
+      - mkdir -p /app/lando/logs
+      - rm -f /app/lando/logs/php_errors.log
+      - touch /app/lando/logs/php_errors.log
+      - rm -f /app/lando/logs/xdebug.log
+      - touch /app/lando/logs/xdebug.log
+      # Install Nano for debugging purposes.
+      - mkdir -p /var/lib/apt/lists/partial
+      - apt-get update && apt install nano
+    build:
+      # Custom configuration for Terminus.
+      # (Terminus is installed as part of Lando pantheon recipe).
+      - mkdir -p /var/www/.terminus
+      - cp /app/lando/terminus-conf/config.yml /var/www/.terminus/config.yml
+    overrides:
+      environment:
+        # Support debugging with Xdebug.
+        PHP_IDE_CONFIG: "serverName=appserver"
+        # This is apparently necessary to overwrite the default Xdebug 3.0
+        # config so that our config in /lando/php-conf/php.ini is used.
+        XDEBUG_MODE:
+  database:
+    portforward: 32813
+    type: mariadb:10.4
+  node:
+    type: node:16
+    # BUILD CHILD THEME CSS & JS HERE
+    # build:
+    #   - cd /app/web/themes/custom/meetingdemo && npm install
+    #   - cd /app/web/themes/custom/meetingdemo && npm rebuild node-sass
+    #   - cd /app/web/themes/custom/meetingdemo && gulp build
+  selenium-chrome:
+    type: compose
+    app_mount: false
+    services:
+      # Chrome 74
+      # Feed free to use a newer image
+      image: selenium/standalone-chrome-debug:3.141.59-neon
+      environment:
+        TZ: America/Los_Angeles
+        START_XVBF: "false"
+      volumes:
+        - /dev/shm:/dev/shm
+      command: /opt/bin/entry_point.sh
+events:
+  pre-start:
+    - appserver: composer install
+  post-pull:
+    - appserver: wp cache flush
+tooling:
+  xdebug:
+    description: Loads Xdebug in the selected mode.
+    cmd:
+      - appserver: /app/lando/scripts/xdebug.sh
+    user: root
+  logs-php:
+    service: appserver
+    description: Displays and tails PHP error logs
+    cmd: tail -f /app/lando/logs/php_errors.log
+  logs-xdebug:
+    service: appserver
+    description: Displays and tails Xdebug logs
+    cmd: tail -f /app/lando/logs/xdebug.log
+  env-deploy:
+    service: appserver
+    description: Deploys to test or live remote Pantheon env (deploys code, updates database, imports config and clears caches)
+    cmd:
+      - /app/lando/scripts/env-deploy.sh
+  env-config-import:
+    service: appserver
+    description: Updates database, imports config and clears caches on a remote Pantheon env
+    cmd:
+      - /app/lando/scripts/env-config-import.sh
+  env-search-reindex:
+    service: appserver
+    description: Reindexes search on a remote Pantheon env
+    cmd:
+      - /app/lando/scripts/env-search-reindex.sh
+  npm:
+    service: node
+  node:
+    service: node
+  # See: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage
+  code-sniff:
+    service: appserver
+    description: Runs PHP_CodeSniffer on custom modules and themes. The same command is run by CircleCI as part of Pantheon Build Tools. This will help you avoid opening PRs that will fail tests.
+    cmd:
+      # Run composer scripts defined in composer.json and run by CircleCI during builds.
+      # See: .ci/test/static/run
+      - composer -n lint
+      - composer -n code-sniff
+      - echo; echo 'Errors will cause CircleCI to fail. Warnings will not.'
+  # See: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
+  code-sniff-fix:
+    service: appserver
+    description: Runs PHP_CodeSniffer auto-fix on custom modules and themes. Not all errors can be fixed automatically.
+    cmd:
+      - composer -n code-sniff-fix
+  behat:
+    service: appserver
+    description: Runs Behat tests.
+    cmd:
+      - /app/vendor/bin/behat --config /app/tests/behat/behat-lando.yml

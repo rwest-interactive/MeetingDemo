@@ -1,4 +1,10 @@
 <?php
+
+/** 
+ * Set Lando URL:
+ */
+$lando_url = 'https://meetingdemo.lndo.site/';
+
 /*
  * Don't show deprecations
  */
@@ -155,6 +161,12 @@ if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ):
 		define( 'WP_HOME', $scheme . '://' . $_SERVER['HTTP_HOST'] );
 		define( 'WP_SITEURL', $scheme . '://' . $_SERVER['HTTP_HOST'] . '/wp' );
 
+	} else if ('lando' === $_ENV['PANTHEON_ENVIRONMENT']) {
+		if (!isset($_ENV['LANDO_URL'])) {
+			$_ENV['LANDO_URL'] = $lando_url;
+		}
+		define('WP_HOME', $_ENV['LANDO_URL']);
+		define('WP_SITEURL', $_ENV['LANDO_URL'] . '/wp');
 	}
 
 	// Force the use of a safe temp directory when in a container
