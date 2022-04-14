@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9b46eefc44b7c2d0b22906678830bd6",
+    "content-hash": "670ba02aea482c868428dc3d34b3b8b5",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -942,22 +942,22 @@
             "homepage": "https://wordpress.org/plugins/wp-native-php-sessions/"
         },
         {
-            "name": "wpackagist-theme/twentytwentytwo",
-            "version": "1.1",
+            "name": "wpackagist-theme/twentynineteen",
+            "version": "1.9",
             "source": {
                 "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentytwentytwo/",
-                "reference": "1.1"
+                "url": "https://themes.svn.wordpress.org/twentynineteen/",
+                "reference": "1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentytwentytwo.1.1.zip"
+                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/twentytwentytwo/"
+            "homepage": "https://wordpress.org/themes/twentynineteen/"
         },
         {
             "name": "yoast/i18n-module",
