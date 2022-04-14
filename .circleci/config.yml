@@ -20,9 +20,9 @@ defaults: &defaults
     # ADMIN_EMAIL:  The email address to give the admin when installing.
     #=========================================================================
     TZ: "/usr/share/zoneinfo/America/Los_Angeles"
-  
+
     # The variables below usually do not need to be modified.
-  
+
     #======================================================================================================================================
     # Circle CI 2.0 does not yet expand environment variables so they have to be manually EXPORTed
     # Once environment variables can be expanded the variables below can be uncommented and the EXPORTs in set-up-globals.sh can be removed
@@ -30,7 +30,7 @@ defaults: &defaults
     # See: https://discuss.circleci.com/t/environment-variable-expansion-in-working-directory/11322
     # See: https://discuss.circleci.com/t/circle-2-0-global-environment-variables/8681
     #======================================================================================================================================
-  
+
     NOTIFY: 'scripts/github/add-commit-comment {project} {sha} "Created multidev environment [{site}#{env}]({dashboard-url})." {site-url}'
     ADMIN_USERNAME: admin
     TERM: dumb
@@ -59,31 +59,31 @@ jobs:
           paths:
             - bash_env.txt
 
-  static_tests:
-    <<: *defaults
+  # static_tests:
+  #   <<: *defaults
 
-    steps:
-      - checkout
+  #   steps:
+  #     - checkout
 
-      - restore_cache:
-          keys:
-            - composer-cache-{{ checksum "composer.lock" }}
-            - composer-cache-
+  #     - restore_cache:
+  #         keys:
+  #           - composer-cache-{{ checksum "composer.lock" }}
+  #           - composer-cache-
 
-      - run:
-          # Set TERMINUS_ENV and related environment variables.
-          # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
-          name: setup-environment-vars
-          command: /build-tools-ci/scripts/set-environment
+  #     - run:
+  #         # Set TERMINUS_ENV and related environment variables.
+  #         # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
+  #         name: setup-environment-vars
+  #         command: /build-tools-ci/scripts/set-environment
 
-      - run:
-          name: run static tests
-          command: ./.ci/test/static/run
+  #     - run:
+  #         name: run static tests
+  #         command: ./.ci/test/static/run
 
-      - save_cache:
-          key: composer-cache-{{ checksum "composer.lock" }}
-          paths:
-            - $HOME/.composer/cache
+  #     - save_cache:
+  #         key: composer-cache-{{ checksum "composer.lock" }}
+  #         paths:
+  #           - $HOME/.composer/cache
 
   build_php:
     <<: *defaults
@@ -121,21 +121,21 @@ jobs:
   # This job compiles Sass and then saves (persists) the directory
   # containing the compiled css for reuse in the deploy_to_pantheon job.
   #build_css:
-    #docker:
-      #- image: node:12.0.0
-    #steps:
-      # - checkout
-      # - run:
-      #     name: Installing NPM dependencies in teachersfcu theme
-      #     command: cd ./web/themes/custom/teachersfcu && npm ci
-      # - run:
-      #     name: Compiling SCSS to CSS
-      #     command: cd ./web/themes/custom/teachersfcu && npm install -g gulp-cli && gulp build
-      # - persist_to_workspace:
-      #     root: .
-      #     paths:
-      #       - web/themes/custom/teachersfcu/build
-      #       - web/themes/custom/teachersfcu/node_modules
+  #docker:
+  #- image: node:12.0.0
+  #steps:
+  # - checkout
+  # - run:
+  #     name: Installing NPM dependencies in teachersfcu theme
+  #     command: cd ./web/themes/custom/teachersfcu && npm ci
+  # - run:
+  #     name: Compiling SCSS to CSS
+  #     command: cd ./web/themes/custom/teachersfcu && npm install -g gulp-cli && gulp build
+  # - persist_to_workspace:
+  #     root: .
+  #     paths:
+  #       - web/themes/custom/teachersfcu/build
+  #       - web/themes/custom/teachersfcu/node_modules
 
   deploy_to_pantheon:
     <<: *defaults
@@ -270,10 +270,10 @@ workflows:
 
   scheduled_update_check:
     triggers:
-       - schedule:
-           cron: "0 0 * * *"
-           filters:
-             branches:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
               only:
                 - master
     jobs:
