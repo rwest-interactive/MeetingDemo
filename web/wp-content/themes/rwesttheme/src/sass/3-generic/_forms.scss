@@ -1,0 +1,148 @@
+/*---------------------------
+      Forns
+---------------------------*/
+form {
+  margin-top: rem(40);
+    label {
+        color: $white-primary;
+        font-family: $font__secondary;
+    }
+    input {
+        height: 36px;
+        width: 100%;
+        font-family: $font__secondary;
+        color: $black;
+        &:focus {
+          outline: none !important;
+          border-color: $black-700;
+        }
+    }
+    textarea {
+        width: 100%;
+        font-family: $font__secondary;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: rem(80);
+        &:focus {
+          outline: none !important;
+          border-color: $black-700;
+        }
+    }
+    input[type="button"],
+    input[type="submit"],
+    button {
+        text-decoration-color: transparent;
+        color: $white-primary;
+        border: solid 1px $white-primary;
+        min-height: 36px;
+        padding: 5px 8px;
+        width: auto;
+        &:hover {
+            background: $white-primary;
+            color: $black-primary;
+            text-decoration-color: $white-primary;
+        }
+    }
+    input[type="checkbox"], input[type="radio"] {
+        height: 20px;
+        width: 20px;
+    }
+    .form_group {
+      display: flex;
+      button {
+        margin-top: 0;
+        margin-left: rem(8);
+        white-space: nowrap;
+      }
+      @include media-max($medium) {
+        flex-wrap: wrap;
+        input, textarea, button {
+          width: 100%;
+        }
+        button {
+          margin-left: 0;
+          margin-top: rem(8);
+        }
+      }
+    }
+}
+
+form.contact-form {
+  input {
+    display: block;
+    margin-bottom: rem(10);
+    @include media-min($medium) {
+      display: inline-block;
+      width: calc(50% - 5px);
+    }
+    &:first-of-type {
+      @include media-min($medium) {
+        margin-right: rem(10);
+      }
+    }
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    font-size: rem(12);
+  }
+}
+
+/* C7 Add to Cart Form */
+
+div.c7-buy-variant form {
+  font-family: $font__secondary;
+  font-weight: $semibold;
+  .c7-product__variant__price {
+    font-size: inherit;
+  }
+  .c7-product__variant__add-to-cart input[type='text'] {
+    height: 36px;
+    border: 1px solid $white;
+    background: transparent;
+    color: $white;
+  }
+  .c7-button {
+    margin-top: 0;
+  }
+  .c7-product__variant__add-to-cart {
+    @include media-max($medium) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+/* Gravity Forms */
+.gform_wrapper {
+  form {
+    input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+      color: $black-primary;
+      border-radius: 0;
+      border: none;
+      &:focus {
+        outline-color: $black-700;
+      }
+    }
+    input[type=submit] {
+      display: block;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+}
+
+.gform_wrapper .gform_validation_errors {
+  border-radius: 0px !important;
+  h2 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: $font__secondary !important;
+  }
+}
+
+.gform_wrapper.gravity-theme .description, .gform_wrapper.gravity-theme .gfield_description, .gform_wrapper.gravity-theme .gsection_description, .gform_wrapper.gravity-theme .instruction, .gform_wrapper .gform_validation_errors {
+  font-family: $font__secondary !important;
+}

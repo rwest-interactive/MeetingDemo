@@ -1,0 +1,43 @@
+{
+    "key": "group_61661166d050a",
+    "title": "Global: Nav Callout Banner",
+    "fields": [
+        {
+            "key": "field_616611705e669",
+            "label": "Callout Banner Content",
+            "name": "callout_banner_text",
+            "type": "wysiwyg",
+            "instructions": "To remove the callout banner, clear the content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1634081446
+}

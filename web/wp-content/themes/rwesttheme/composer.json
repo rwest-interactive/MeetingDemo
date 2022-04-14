@@ -1,0 +1,9 @@
+{
+  "name": "rwest-interactive/rwesttheme",
+  "description": "WordPress theme for RWest Marketing",
+  "type": "wordpress-theme",
+  "license": "GPL-2.0",
+  "require" : {
+    "php" : ">=7.3"
+  }
+}

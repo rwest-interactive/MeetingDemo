@@ -1,0 +1,22 @@
+@import "../settings/variables";
+.two-col-with-divider{
+  .block-inner{
+    padding: rem(48) 0;
+  }
+  .columns{
+    padding: rem(50);
+    @include media-min($medium) {
+      padding: rem(90);
+    }
+  }
+  .columns:first-of-type{
+    border-right: 1px solid $black-700;
+    @include media-max($large) {
+      border-right: none;
+      border-bottom: 1px solid $black-700;
+    }
+  }
+  h2 {
+    margin-bottom: rem(30);
+  }
+}

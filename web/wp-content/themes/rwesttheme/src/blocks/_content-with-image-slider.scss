@@ -1,0 +1,107 @@
+@import "../settings/variables";
+.content-with-image-slider{
+  padding: 2.5rem 0 10px;
+  @include media-min($large) {
+    padding: 2.5rem 1px;
+  }
+  .slider-container{
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: -3px;
+  }
+  img{
+    max-height: rem(400);
+    margin: 0 auto;
+    @include media-max($large) {
+      max-height: rem(325);
+    }
+    @include media-max($medium) {
+      max-height: rem(275);
+    }
+  }
+  .columns{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+  }
+  .content {
+    padding: rem(75);
+    @include media-max($large) {
+      // background-color: $black;
+    }
+    p {
+      margin: rem(16) 0;
+    }
+  }
+  .slick-dots li button .slick-dot-icon{
+    color: $white;
+  }
+  .slick-slide{
+    margin: 0;
+    padding: 0;
+  }
+  .slick-slider.slick-dotted{
+    @include media-max($medium) {
+      margin-bottom: 0;
+    }
+  }
+  .slide{
+    position: relative;
+    a {
+      display: block;
+      color: inherit;
+      transition: all 300ms ease;
+    }
+    .desktop-label{
+      position: relative;
+      font-family: $font__secondary;
+      font-weight: 700;
+      margin-bottom: rem(25);
+      letter-spacing: 3px;
+    }
+    .mobile-label{
+      position: relative;
+      font-family: $font__secondary;
+      font-weight: 700;
+      margin-top: rem(25);
+      letter-spacing: 3px;
+      padding: rem(11) 0;
+      width: 100%;
+      background-color: $gray-primary;
+    }
+  }
+  .slick-dots li{
+    margin: 0 2px;
+    button{
+      width: rem(20);
+      height: rem(20);
+      margin: 0;
+      padding: rem(5);
+    }
+  }
+  .slick-dots li.slick-active button:focus .slick-dot-icon{
+    color: $white;
+  }
+  .slick-dots li button .slick-dot-icon:before{
+    font-size: 8px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .slick-dots li.slick-active button .slick-dot-icon:before{
+    font-size: 8px;
+  }
+  .slick-dots{
+    bottom: -40px;
+  }
+  @include media-max($medium) {
+    .content {
+      padding: rem(50);
+    }
+    h3 {
+        font-size: rem(36);
+      }
+  }
+}

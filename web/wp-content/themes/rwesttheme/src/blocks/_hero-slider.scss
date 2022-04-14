@@ -1,0 +1,167 @@
+@import "../settings/variables";
+.hero-slider{
+  max-width: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  @include media-min($medium) {
+    img.mobile-only, video.mobile-only {
+      display: none;
+    }
+  }
+  // fix for landscape orientation phone
+  @media screen and (min-width: 641px) and (min-height: 450px) {
+    height: 70vh;
+    min-height: 500px;
+  }
+  @include media-min($medium) {
+    max-height: rem(900);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: rem(500);
+    @include media-max($medium) {
+      padding: rem(50) rem(50) rem(80) rem(50);
+    }
+    @media screen and (min-width: 768px) and (min-height:800px) {
+      bottom: rem(60);
+    }
+    @include media-min($large) {
+      max-width: rem(850);
+    }
+    *{
+      color: $black-primary;
+    }
+    h1{
+      font-size: rem(72);
+      line-height: 1.1;
+      letter-spacing: rem(4);
+      &.smaller {
+        font-size: rem(48);
+        line-height: 1.250;
+        @include media-max($medium) {
+            font-size: rem(24);
+        }
+      }
+      @include media-max($medium) {
+          font-size: rem(36);
+          line-height: 1.350;
+          letter-spacing: 2px;
+        }
+    }
+    p {
+      margin: rem(16) 0;
+      @include media-min($large) {
+        max-width: rem(500);
+      }
+    }
+  }
+
+  .slider,
+  .slick-list,
+  .slick-track,
+  .slick-slide,
+  .slick-slide > div{
+    @include media-min($medium) {
+      height: 100% !important; //overwrites adaptive height on mobile
+    }
+    text-align: inherit;
+  }
+  .slick-slide {
+    padding: 0;
+  }
+  .row {
+    max-width: none;
+    display: flex !important;
+    align-items: flex-end;
+    padding: rem(75);
+    position: relative;
+    overflow: hidden;
+    @include media-max($medium) {
+      padding: 0;
+      .screen {
+        display: none;
+      }
+      img {
+        height: 35vh;
+        min-height: rem(200);
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    @include media-min($medium) {
+      height: 100%;
+    }
+  }
+  .row.bg-image {
+    @include media-max($medium) {
+      background: none;
+      background-image: none !important;
+    }
+    @include media-min($medium) {
+      padding: rem(75);
+    }
+  }
+  .align-right{
+    .columns{
+      text-align: right;
+      p {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+  .align-center {
+    .columns {
+      text-align: center;
+      p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  
+  video {
+    width: 100%;
+    height: auto;
+    display: none;
+    @include media-min($medium) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      z-index: 1;
+      display: block; // show on desktop only
+    }
+  }
+
+}
+.light{
+  *{
+    color: $white;
+  }
+}
+.dark{
+  @include media-min($medium) {
+    *{
+      color: $black-primary;
+     }
+    .button, .button:visited {
+      border-color: $black-primary;
+      color: $black-primary;
+      &:hover, &:focus {
+        color: $white;
+        background-color: $black-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../settings/variables";
+.large-image-with-text{
+  // padding: rem(70) rem(75)!important;
+  padding-left: rem(75);
+  padding-right: rem(75);
+  @include media-max($medium) {
+    padding-left: rem(30);
+    padding-right: rem(30);
+    // padding: rem(70) rem(30)!important;
+  }
+  h3{
+    font-size: rem(72);
+    line-height: 1.25;
+    letter-spacing: rem(4);
+    @include media-max($medium) {
+      font-size: rem(40);
+    }
+  }
+}
