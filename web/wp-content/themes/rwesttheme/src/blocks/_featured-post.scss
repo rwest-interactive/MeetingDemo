@@ -1,0 +1,62 @@
+@import "../settings/variables";
+.featured-post{
+  @include media-min($medium) {
+    .block-inner {
+      padding: rem(78) 0;
+    }
+  }
+  img{
+    display: block;
+    width: 100%;
+    max-height: 500px;
+  }
+  .content{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: rem(20);
+    @include media-min($large) {
+      padding: rem(60) rem(120);
+    }
+    h2 {
+      margin-bottom: rem(20);
+      @include media-min($large) {
+        margin-top: rem(40);
+        margin-bottom: rem(20);
+      }
+      a {
+        color: $white-primary;
+        &:hover {
+          color: $black-700;
+          text-decoration: $black-primary;
+        }
+      }
+    }
+    p {
+      @include media-max($medium) {
+        font-size: rem(14);
+        margin-bottom: rem(20);
+      }
+      @include media-min($large) {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+  .columns.image-col {
+    @include media-min($medium) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @include media-max($medium) {
+    .columns.image {
+      padding-left:0;
+      padding-right:0;
+    }
+    .columns.content {
+      padding: rem(40) rem(50);
+    }
+  }
+}

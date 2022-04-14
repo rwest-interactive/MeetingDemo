@@ -1,0 +1,151 @@
+@import "../settings/variables";
+.grid-multi-column{
+  padding: 0 rem(15) rem(15);
+  margin-top: rem(80);
+  margin-bottom: rem(40);
+  @include media-max($medium) {
+    margin-top: rem(10);
+  }
+
+  .block-inner{
+    border: 1px solid $black-700;
+    max-width: rem(1296);
+    justify-content: center;
+    @include media-min($medium) {
+      padding: rem(30) rem(15);
+    }
+  }
+
+  .grid-multi-column-col {
+    @media screen and (min-width: 1073px){
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+    }
+
+    @media screen and (min-width: 615px) and (max-width: 1072px){
+      -webkit-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: rem(710);
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 614px){
+      max-width: rem(425);
+      margin: 0 auto;
+    }
+  }
+
+  .grid-item{
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+
+    .grid-item-inner{
+      background-color: $light-gray-100;
+      margin: 0;
+      color: $black;
+      height: 100%;
+
+      .gmc-thumbnail{
+        position: relative;
+        padding: 0;
+        min-height: rem(365);
+        text-align: center;
+        background-color: $white-primary;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media-max($large) {
+          min-height: rem(265);
+        }
+
+        img{
+          height: 100%;
+          object-fit: cover;
+        }
+        img.gmc-thumbnail-img {
+          height: rem(415);
+          margin-top: rem(10);
+          margin-bottom: rem(10);
+        }
+      }
+
+      .gmc-details{
+        padding-top: rem(30);
+        padding-bottom: rem(30);
+        padding-left: rem(38);
+        padding-right: rem(38);
+
+        .content{
+          h3{
+            font-family: $font__main;
+            font-size: rem(36);
+            line-height: 1.3;
+            margin-bottom: rem(10);
+            @include media-max($xlarge) {
+              font-size: rem(34);
+            }
+            @include media-max($large) {
+              font-size: rem(30);
+            }
+          }
+          h4 {
+            font-family: $font__secondary;
+            margin-bottom: rem(20);
+            font-weight: 600;
+            font-size: rem(16);
+          }
+          p{
+            font-family: $font__secondary;
+            color: $black-primary;
+            font-size:.85em;
+          }
+          a.button-dark-solid {
+            margin-top: .75em;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 770px) and (max-width: 1072px){
+      .gmc-thumbnail, .gmc-details {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+      }
+    }
+
+    @media screen and (max-width: 614px){
+      .gmc-thumbnail, .gmc-details {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+      }
+
+      .gmc-details{
+        max-width: rem(350);
+        margin: 0 auto;
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+        padding-left: rem(28);
+        padding-right: rem(28);
+      }
+
+      img{
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        max-height: rem(400);
+      }
+      img.gmc-thumbnail-img {
+        width: auto;
+      }
+    }
+  }
+}

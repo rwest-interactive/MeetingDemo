@@ -1,0 +1,15 @@
+@import "../settings/variables";
+.cta-with-content{
+  .row{
+    max-width: none;
+  }
+  .columns{
+    padding-top: rem(75);
+    padding-bottom: rem(50);
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
+  *{
+    color: $white;
+  }
+}

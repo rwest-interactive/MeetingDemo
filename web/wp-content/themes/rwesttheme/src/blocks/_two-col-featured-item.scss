@@ -1,0 +1,101 @@
+@import "../settings/variables";
+.two-columns-featured-item {
+  // background-color: #151515;
+  .header{
+    padding: rem(0) rem(0) rem(0);
+    height: 100%;
+    .columns{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .columns.image {
+      padding-left: 0;
+      padding-right: 0;
+      align-items: center;
+      background: $white-primary;
+      position: relative;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+      img.bottle-shot {
+        height: rem(395);
+      }
+    }
+    .columns.content {
+      padding-top: rem(60);
+      padding-bottom: rem(40);
+      justify-content: flex-start;
+    }
+    a:not(.button):not(.button-black-700-solid), a:visited:not(.button):not(.button-black-700-solid) {
+      color: inherit;
+      &:hover {
+        color: $black-700;
+        text-decoration: none;
+      }
+    }
+    h3{
+      font-size: rem(36);
+      line-height: 1.350;
+      letter-spacing: 2px;
+      font-weight: $bold;
+      margin-bottom: rem(15);
+      line-height: 1.1;
+      @include media-max($xlarge) {
+        font-size: rem(34);
+      }
+      @include media-max($large) {
+        font-size: rem(30);
+      }
+      @include media-max($medium) {
+        font-size: rem(30);
+        margin-bottom: rem(10);
+      }
+    }
+    h4{
+      font-size: rem(17);
+      margin-bottom: rem(20);
+      font-family: $font__secondary;
+      font-weight: 500;
+    }
+    h5 {
+      margin-bottom: rem(20);
+      font-weight: $semibold;
+      &.harvest {
+        color: $black-700;
+      }
+    }
+    form {
+      margin-top: 1rem;
+    }
+    div.c7wp-wrap {
+      margin-top: rem(0);
+      form {
+        margin-top: rem(20);
+      }
+      form div:first-of-type {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+  @include media-max($medium) {
+    .row.header > .columns:first-child {
+      padding-left:0;
+      padding-right:0;
+    }
+    .row.header > .columns:last-child {
+      padding: rem(40) rem(50);
+    }
+  }
+  @include media-min($large) {
+    // if there is only 1 available item, make it wider on desktop
+    .columns.featured-item:nth-child(1):last-child {
+        -webkit-flex: 0 0 66.6667%;
+        -ms-flex: 0 0 66.6667%;
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+    }
+  }
+}

@@ -1,0 +1,476 @@
+
+/* stylelint-disable */
+////////////////////
+//Main Desktop Menu
+///////////////////
+header.site-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $white;
+  z-index: 4;
+  @include media-max($large) {
+    display: none;
+  }
+  .row .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Nav item */
+.menus{
+  padding: rem(20) 0;
+
+  @include media-min($large)  {
+    padding-bottom: rem(20);
+    svg {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    width: 100%;
+  }
+  li{
+    list-style: none;
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  svg{
+    display: block;
+    path{
+      fill: $white;
+      // stroke: $white;
+      transition: all .5s;
+    }
+    &:hover {
+      path{
+        fill: $black-700;
+      }
+    }
+  }
+  li.cart-icon.items-in-cart svg path {
+    fill: $black-700;
+  }
+  a{
+    color: $black;
+    // text-transform: uppercase;
+    font-family: $font__secondary;
+    text-decoration-color:$black-primary;
+    &:hover{
+      text-decoration: underline;
+      text-decoration-color:$black-primary;
+      color: $black-700;
+    }
+  }
+  a.shop-link {
+      font-family: $font__main;
+      color: $black-primary;
+      background: $white-primary;
+      width: rem(42);
+      height: rem(42);
+      text-align: center;
+      border-radius: 50%;
+      line-height: .85;
+      font-size: .7rem;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+      }
+  }
+  .right-side-icon-container {
+   ul {
+     flex-flow: row nowrap;
+     li:nth-of-type(2),
+     li:nth-of-type(3) {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+     li:nth-of-type(1) img {
+      max-width: rem(40);
+     }
+     li:nth-of-type(2) img {
+       max-width: rem(44);
+     }
+     li:nth-of-type(3) img {
+       max-width: rem(30);
+     }
+     a {
+       display: block;
+     }
+   }
+  }
+}
+
+/* stylelint-enable */
+////////////////////
+//Main Mobile menu
+///////////////////
+header.mobile-site-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background:$black-primary;
+  z-index: 4;
+  @include media-min($large) {
+    display: none;
+  }
+  .columns.brand-icon {
+    li {
+      @include media-min($medium) {
+        text-align: left;
+        justify-content: flex-start;
+      }
+    }
+    svg {
+      width: rem(90);
+      @include media-min($medium) {
+        width: rem(110);
+      }
+    }
+  }
+  .columns.right-side-icon-container {
+    @include media-min($medium) {
+      justify-content: flex-end;
+    }
+    ul {
+      max-width: rem(220);
+    }
+  }
+  .columns.right-side-icon-container ul li {
+    &:nth-of-type(1) img {
+      max-width: rem(38);
+      @include media-min($medium) {
+        max-width: rem(40);
+      }
+    }
+    &:nth-of-type(2) img {
+      max-width: rem(20);
+      @include media-min($medium) {
+        max-width: rem(24);
+      }
+    }
+    &:nth-of-type(3) img {
+      max-width: rem(18);
+      @include media-min($medium) {
+      max-width: rem(22);
+      }
+    }
+  }
+}
+nav.mobile-nav {
+  width: 100vw;
+  height: 0%;
+  background: $black-primary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  overflow-y: scroll;
+  transition: 0.5s;
+  @include media-min($large) {
+    display: none;
+  }
+  .columns {
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      background: $black-primary;
+    }
+  }
+  &.open {
+    height: 100%;
+    @include media-min($large) {
+      display: none;
+    }
+  }
+  &.closed {
+    height: 0;
+  }
+  ul {
+    background: $black-primary;
+    padding: 0 rem(16);
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: rem(10);
+  }
+  ul li {
+    padding: rem(20) 0;
+    border-bottom: 1px solid $black-700;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    a {
+      font-family: $font__secondary;
+      font-size: rem(18);
+      font-weight: $semibold;
+      text-decoration: none;
+      text-transform:uppercase;
+      color: $white-primary;
+      width: 100%;
+      letter-spacing: rem(3);
+      &:hover {
+        color: $black-700;
+      }
+      @include media-max(321px) {
+        font-size: rem(18);
+      }
+    }
+  }
+  .main-menu-mobile ul:not(.batch-finder):not(.children) {
+    padding-top: rem(200);
+
+  }
+  .main-menu-mobile ul.batch-finder {
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    li {
+      border-top: 1px solid $black-700;
+    }
+  }
+  .secondary-menu-mobile {
+    align-self: flex-end;
+  }
+  .secondary-menu-mobile ul {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    background: $black-primary;
+    li {
+      border: none;
+      display: inline-block;
+      width: 50%;
+      margin: 0;
+      background: $black-primary;
+      &:first-of-type {
+        border-right: $white 1px solid;
+      }
+      &:first-of-type a {
+        position: relative;
+        top: rem(8);
+      }
+      &:last-of-type a {
+        border-radius:28px;
+        display:inline-block;
+        cursor:pointer;
+        padding:rem(10) rem(20);
+        text-decoration:none;
+        color: $white;
+        max-width: rem(160);
+        &:focus {
+          background-color: $white;
+          border: 2px solid $white;
+        }
+      }
+    }
+    a {
+      color: $white;
+      padding: rem(16);
+      font-size: rem(20);
+      // text-transform: uppercase;
+      @include media-max(321px) {
+        font-size: rem(18);
+      }
+    }
+
+  }
+}
+////////////////////
+// Hamburger Icon
+///////////////////
+.nav-icon {
+  margin-top: rem(8);
+  width: 34px;
+  height: 40px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  @include media-min(768px) {
+    margin-top: rem(16);
+  }
+}
+.nav-icon span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: $white-primary;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+.nav-icon span:nth-child(1) {
+  top: 0px;
+}
+.nav-icon span:nth-child(2),.nav-icon span:nth-child(3) {
+  top: 10px;
+}
+.nav-icon span:nth-child(4) {
+  top: 20px;
+}
+.nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.nav-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+/////////////////////
+// Search Bar
+////////////////////
+.search-container {
+  width: 100%;
+  height: auto;
+  background: $black-primary;
+  position: absolute;
+  top: 0;
+  max-height: 0px;
+  left: 0;
+  z-index: 3;
+  transition: 0.4s;
+  position: fixed;
+    // @include media-min($large) { // use this if nav is relative on desktop. not needed if nav is fixed
+    //   position: relative;
+    //   max-height: 0px;
+    // }
+    &.closed {
+      top: 0 !important;
+      max-height: 0px;
+    }
+    &.open {
+      // top: rem(104); // calculated in JS
+      max-height: 300px;
+    }
+  form {
+    margin-top: 0;
+    width: 80%;
+    max-width: rem(1000);
+    margin: 0 auto;
+    padding: rem(20) 0 rem(40) 0;
+    input {
+      background: $black-primary;
+      padding: rem(32);
+      border: 1px solid $black-700;
+      color: $white-primary;
+      border-radius: rem(2);
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $black-700;
+        opacity: 1; /* Firefox */
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $black-700;
+      }
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $black-700;
+      }
+    }
+  }
+}
+
+
+.c7wp-wrap[data-c7-type="cart"] {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  #c7-cart > a {
+    // border:1px solid red; // use for debugging cart link position
+    // position: absolute;
+    position: fixed;
+    z-index: 5;
+    width: rem(30);
+    height: rem(30);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: rem(105); // overwritten by JS in case banner is removed
+    right: 7.25%; // where the cart icon lines up in the current nav structure.
+    @include media-max($wide_width) {
+      right: 6.75%;
+    }
+    @include media-max($large) { // mobile nav
+      right: 26%;
+      position: fixed;
+    }
+    @include media-max(960px) {
+      width: rem(35);
+      height: rem(35);
+      right: 28%;
+    }
+    @include media-max($medium) {
+      right: 38%;
+    }
+    @include media-max(360px){
+      right: 35%;
+    }
+    @include media-min($xlarge) {
+      right: calc(((100vw - #{$row-max-width}) / 2) + (#{$row-max-width} * .0725));
+    }
+    &:before {
+      content: '';
+      display: none;
+    }
+    span {
+      display: none;
+    }
+  }
+  section.c7-cart { // cart fly out
+    // z-index: 999; // over login link
+  }
+}
+
+body.admin-bar {
+  @include media-min($large) {
+    header.site-header {
+      top: 32px;
+    }
+  }
+}

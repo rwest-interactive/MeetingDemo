@@ -1,0 +1,85 @@
+@import "../settings/variables";
+.hero{
+  *{
+    color: $white;
+  }
+
+  .block-inner{
+    padding: rem(75);
+    display: flex !important;
+    align-items: flex-end;
+    padding: rem(75);
+    height: 100%;
+    max-width: none;
+    @include media-max($medium) {
+      padding: 0;
+    }
+
+    @media screen and (min-width: 641px) and (min-height: 450px) {
+      min-height: 40vh;
+    }
+
+    @include media-min($large) {
+      min-height: 70vh;
+    }
+    @include media-min($medium) {
+      max-height: rem(900);
+    }
+  }
+  .columns{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include media-max($medium) {
+      padding: 0;
+    }
+  }
+  .content {
+    max-width: rem(500);
+    position: relative;
+
+    @include media-min($large) {
+      max-width: rem(850);
+    }
+    @media screen and (min-width: 1025px) and (min-height:800px) {
+      bottom: rem(60);
+    }
+    @include media-max($medium) {
+        padding: rem(50);
+    }
+    h1 {
+      font-family: $font__main;
+      font-size: rem(72);
+      line-height: 1.1;
+      letter-spacing: 2px;
+      font-weight: $bold;
+      @include media-max($medium) {
+          font-size: rem(36);
+      }
+      &.smaller {
+        font-size: rem(48);
+        line-height: 1.250;
+        @include media-max($medium) {
+            font-size: rem(24);
+        }
+      }
+    }
+    p {
+      margin: rem(16) 0;
+      @include media-min($large) {
+        max-width: rem(500);
+      }
+    }
+  }
+  @include media-max($medium) {
+    &:not(.single-post-hero) {
+      background-image: none !important;
+    }
+  }
+  @include media-min($medium) {
+    img.mobile-only {
+      display: none;
+    }
+  }
+}

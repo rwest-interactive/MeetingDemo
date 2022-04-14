@@ -1,0 +1,71 @@
+.newsletter{
+  width: 100%;
+  background-color: $dark-gray-100;
+  padding: rem(17) rem(17);
+  position: relative;
+  .columns{
+    text-align: center;
+    h3 {
+      margin-bottom: rem(16);
+    }
+    p {
+      max-width: rem(550);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  div.footer-newsletter-anchor {
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  form {
+    margin: rem(20) auto rem(0);
+    max-width: rem(600);
+    @media screen and (min-width: 640px) {
+      display: flex;
+    }
+
+    .gform_body.gform-body {
+      width: 100%;
+      @media screen and (min-width: 640px) {
+        width: 90%;
+        padding-right: rem(10);
+      }
+
+      .gform_legacy_markup_wrapper ul.gform_fields li.gfield {
+        padding-right: 0;
+        @media screen and (min-width: 640px) {
+          padding-right: rem(10);
+        }
+      }
+    }
+
+    input[type="email"] {
+      padding: rem(5) rem(10) !important;
+    }
+
+    .gform_footer.top_label {
+      width: auto;
+      @media screen and (min-width: 640px) {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      input[type='submit'] {
+        line-height: initial !important;
+        @media screen and (min-width: 640px) {
+            margin: 0;
+        }
+      }
+    }
+    .gform_legacy_markup_wrapper .gform_footer {
+      padding: 0;
+      @media screen and (min-width: 640px) {
+        padding: rem(16) 0 rem(10) 0;
+      }
+    }
+
+  }
+}

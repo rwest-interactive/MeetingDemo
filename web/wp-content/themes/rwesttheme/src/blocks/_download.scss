@@ -1,0 +1,12 @@
+@import "../settings/variables";
+.download{
+  .block-inner{
+    padding: rem(32) 0;
+  }
+  .columns{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

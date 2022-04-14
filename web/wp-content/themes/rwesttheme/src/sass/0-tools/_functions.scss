@@ -1,0 +1,6 @@
+@function background_url( $image ) {
+	@return url( "../img/" + $image );
+}
+@function rem($px,$rembase:16){
+	@return calc($px/$rembase)+rem;
+}

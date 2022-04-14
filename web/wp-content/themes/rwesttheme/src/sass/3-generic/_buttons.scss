@@ -1,0 +1,114 @@
+// Button styles
+/*************************************
+Buttons
+**************************************/
+
+a.button,
+button,
+.c7-button,
+.wp-block-button .wp-block-button__link,
+.wp-block-button.is-style-outline .wp-block-button__link,
+input[type="button"],
+input[type="submit"] {
+    font-family: $font__secondary;
+    font-size: rem(18);
+    line-height: rem(24);
+    font-weight: $normal;
+    padding: rem(4) rem(12);
+    color: $white-primary;
+    border: solid 1px $white-primary;
+    border-radius: 0;
+    letter-spacing: 3px;
+    background: transparent;
+    text-decoration-color: transparent;
+		// text-transform: uppercase;
+		outline: none;
+		margin-top: rem(20);
+		display:inline-block;
+		cursor:pointer;
+    @include media-max($medium) {
+      font-size: rem(14);
+    }
+		&:hover {
+        text-decoration: none;
+				background: $white-primary;
+				color: $black-primary;
+				transition: all 500ms;
+		}
+    &.button-dark {
+        color: $black-primary;
+        border: solid 1px $black-primary;
+        &:hover {
+            background: $black-primary;
+            color: $white-primary;
+            text-decoration-color: $black-primary;
+        }
+    }
+    &.button-dark-solid {
+      color: $white-primary;
+      background: $black-primary;
+      border: solid 1px $black-primary;
+      &:hover {
+          color: $black-primary;
+          background: $white-primary;
+          text-decoration-color: $white-primary;
+          border: solid 1px $white-primary;
+      }
+    }
+    &:disabled, [disabled="disabled"],
+    &:disabled:hover,
+    [disabled="disabled"]:hover,
+    &.disabled,
+    &.disabled:hover
+    {
+        color: $black-700;
+        border-color: $black-700;
+        border: solid 1px $black-700;
+        background: transparent;
+        pointer-events: none;
+    }
+		&:focus {
+			color: $black-700;
+			border-color: $black-700;
+			border: solid 1px $black-700;
+		}
+}
+
+.button-black-700-solid {
+  font-family: $font__secondary;
+  font-size: rem(18);
+  line-height: rem(24);
+  font-weight: $normal;
+  padding: rem(4) rem(12);
+  color: $white-primary;
+  border: solid 1px $black-700;
+  background: $black-700;
+  border-radius: 0;
+  letter-spacing: 3px;
+  text-decoration-color: transparent;
+  // text-transform: uppercase;
+  outline: none;
+  margin-top: rem(20);
+  display:inline-block;
+  cursor:pointer;
+  @include media-max($medium) {
+    font-size: rem(14);
+  }
+  &:hover, &:focus {
+      text-decoration: none;
+      background: $white-primary;
+      border: solid 1px $white-primary;
+      color: $black-primary;
+      transition: all 500ms;
+  }
+}
+.wp-block-button.is-style-fill .wp-block-button__link {
+  border: solid 1px $black-primary;
+  background: $black-primary;
+  color: $white-primary;
+  &:hover {
+      background: $black-primary;
+      color: $white-primary;
+      text-decoration-color: $black-primary;
+  }
+}

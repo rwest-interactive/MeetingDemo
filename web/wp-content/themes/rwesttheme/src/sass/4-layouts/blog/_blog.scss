@@ -1,0 +1,19 @@
+/* Single Blog Post Page */
+.single-post .site-main .container.blog-grid {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  .row {
+    background-color: $black-primary;
+  }
+}
+.single-post .blog-content{
+  a {
+    font-family: $font__secondary;
+  }
+  ul, ol {
+  margin-left: rem(30);
+  li {
+    margin-bottom: rem(5);
+  }
+  }
+}

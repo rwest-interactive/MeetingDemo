@@ -1,0 +1,24 @@
+@import "../settings/variables";
+.single-column-content-with-bg {
+  @include media-max($large) {
+    background-image: none !important;
+  }
+  .columns{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+  }
+  .mobile-image {
+    height: 265px;
+  }
+  .content {
+    padding: rem(75);
+    @include media-max($medium) {
+      padding: rem(54);
+    }
+    p {
+      margin: rem(16) 0;
+    }
+  }
+}
