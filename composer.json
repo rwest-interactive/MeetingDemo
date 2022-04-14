@@ -13,10 +13,6 @@
       "url": "https://github.com/pantheon-systems/wordpress-composer"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/rwest-interactive/rwesttheme"
-    },
-    {
       "type": "composer",
       "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
     },
@@ -46,15 +42,12 @@
     "pantheon-systems/wordpress-composer": "*",
     "roots/wp-password-bcrypt": "^1.0.0",
     "rvtraveller/qs-composer-installer": "^1.2",
-    "rwest-interactive/rwesttheme": "^0.0.13",
     "vlucas/phpdotenv": "^4.1.0",
-    "wpackagist-plugin/akismet": "^4.2",
     "wpackagist-plugin/duplicate-post": "4.4",
-    "wpackagist-plugin/lh-hsts": "^1.24",
     "wpackagist-plugin/pantheon-advanced-page-cache": ">=0.3.0",
     "wpackagist-plugin/regenerate-thumbnails": "3.1.5",
     "wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",
-    "wpackagist-theme/twentynineteen": "^1.2",
+    "wpackagist-theme/twentytwentytwo": "^1.1",
     "yoast/wordpress-seo": "^18.4"
   },
   "require-dev": {
@@ -96,7 +89,6 @@
       ]
     },
     "installer-paths": {
-      "web/wp-content/themes/rwesttheme/": ["rwest-interactive/rwesttheme"],
       "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/wp-content/themes/{$name}/": ["type:wordpress-theme"],
       "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]

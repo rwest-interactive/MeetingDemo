@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a9125ee6e4e7aa4e618b8d097b2133a",
+    "content-hash": "a9b46eefc44b7c2d0b22906678830bd6",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -710,34 +710,6 @@
             "time": "2021-01-04T22:27:18+00:00"
         },
         {
-            "name": "rwest-interactive/rwesttheme",
-            "version": "v0.0.13",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:rwest-interactive/rwesttheme.git",
-                "reference": "905cbb5bf701cf3c5a723b889b5ffdf7393e6115"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rwest-interactive/rwesttheme/zipball/905cbb5bf701cf3c5a723b889b5ffdf7393e6115",
-                "reference": "905cbb5bf701cf3c5a723b889b5ffdf7393e6115",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3"
-            },
-            "type": "wordpress-theme",
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "WordPress theme for RWest Marketing",
-            "support": {
-                "source": "https://github.com/rwest-interactive/rwesttheme/tree/v0.0.13",
-                "issues": "https://github.com/rwest-interactive/rwesttheme/issues"
-            },
-            "time": "2022-03-18T22:30:05+00:00"
-        },
-        {
             "name": "symfony/polyfill-ctype",
             "version": "v1.25.0",
             "source": {
@@ -898,24 +870,6 @@
             "time": "2021-12-12T23:07:53+00:00"
         },
         {
-            "name": "wpackagist-plugin/akismet",
-            "version": "4.2.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/4.2.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.4.2.2.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/akismet/"
-        },
-        {
             "name": "wpackagist-plugin/duplicate-post",
             "version": "4.4",
             "source": {
@@ -932,24 +886,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
-        },
-        {
-            "name": "wpackagist-plugin/lh-hsts",
-            "version": "1.25",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/lh-hsts/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/lh-hsts.zip?timestamp=1594531855"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/lh-hsts/"
         },
         {
             "name": "wpackagist-plugin/pantheon-advanced-page-cache",
@@ -1006,22 +942,22 @@
             "homepage": "https://wordpress.org/plugins/wp-native-php-sessions/"
         },
         {
-            "name": "wpackagist-theme/twentynineteen",
-            "version": "1.9",
+            "name": "wpackagist-theme/twentytwentytwo",
+            "version": "1.1",
             "source": {
                 "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentynineteen/",
-                "reference": "1.9"
+                "url": "https://themes.svn.wordpress.org/twentytwentytwo/",
+                "reference": "1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.9.zip"
+                "url": "https://downloads.wordpress.org/theme/twentytwentytwo.1.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/twentynineteen/"
+            "homepage": "https://wordpress.org/themes/twentytwentytwo/"
         },
         {
             "name": "yoast/i18n-module",
