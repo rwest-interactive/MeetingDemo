@@ -2481,16 +2481,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.4.11",
+            "version": "1.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "608e8b20a9072f84cac4f2fddb4420893d69eb83"
+                "reference": "623eb02be728185110587e4259780e5f7f9f3983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/608e8b20a9072f84cac4f2fddb4420893d69eb83",
-                "reference": "608e8b20a9072f84cac4f2fddb4420893d69eb83",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/623eb02be728185110587e4259780e5f7f9f3983",
+                "reference": "623eb02be728185110587e4259780e5f7f9f3983",
                 "shasum": ""
             },
             "require": {
@@ -2538,9 +2538,9 @@
             ],
             "support": {
                 "issues": "https://github.com/instaclick/php-webdriver/issues",
-                "source": "https://github.com/instaclick/php-webdriver/tree/1.4.11"
+                "source": "https://github.com/instaclick/php-webdriver/tree/1.4.13"
             },
-            "time": "2022-03-30T01:28:33+00:00"
+            "time": "2022-04-15T10:40:37+00:00"
         },
         {
             "name": "laminas/laminas-code",

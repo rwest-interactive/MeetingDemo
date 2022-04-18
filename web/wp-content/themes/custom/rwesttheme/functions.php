@@ -43,7 +43,7 @@ require get_template_directory() . '/inc/blocks.php';
 /**
  * dynamic icons
  */
-// require get_template_directory() . '/inc/acf_icons.php';
+require get_template_directory() . '/inc/acf_icons.php';
 
 
 /**
