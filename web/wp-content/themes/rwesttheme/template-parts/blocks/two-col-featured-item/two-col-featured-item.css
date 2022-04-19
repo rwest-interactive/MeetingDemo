@@ -1,3 +1,136 @@
-.two-columns-featured-item .header{padding:0rem 0rem 0rem;height:100%}.two-columns-featured-item .header .columns{display:flex;flex-flow:column nowrap;justify-content:center;align-items:flex-start}.two-columns-featured-item .header .columns.image{padding-left:0;padding-right:0;align-items:center;background:#fff;position:relative}.two-columns-featured-item .header .columns.image img{height:100%;object-fit:cover}.two-columns-featured-item .header .columns.image img.bottle-shot{height:24.6875rem}.two-columns-featured-item .header .columns.content{padding-top:3.75rem;padding-bottom:2.5rem;justify-content:flex-start}.two-columns-featured-item .header a:not(.button):not(.button-black-700-solid),.two-columns-featured-item .header a:visited:not(.button):not(.button-black-700-solid){color:inherit}.two-columns-featured-item .header a:not(.button):not(.button-black-700-solid):hover,.two-columns-featured-item .header a:visited:not(.button):not(.button-black-700-solid):hover{color:#595959;text-decoration:none}.two-columns-featured-item .header h3{font-size:2.25rem;line-height:1.35;letter-spacing:2px;font-weight:700;margin-bottom:0.9375rem;line-height:1.1}@media only screen and (max-width: 1440px){.two-columns-featured-item .header h3{font-size:2.125rem}}@media only screen and (max-width: 1024px){.two-columns-featured-item .header h3{font-size:1.875rem}}@media only screen and (max-width: 640px){.two-columns-featured-item .header h3{font-size:1.875rem;margin-bottom:0.625rem}}.two-columns-featured-item .header h4{font-size:1.0625rem;margin-bottom:1.25rem;font-family:"Montserrat";font-weight:500}.two-columns-featured-item .header h5{margin-bottom:1.25rem;font-weight:500}.two-columns-featured-item .header h5.harvest{color:#595959}.two-columns-featured-item .header form{margin-top:1rem}.two-columns-featured-item .header div.c7wp-wrap{margin-top:0rem}.two-columns-featured-item .header div.c7wp-wrap form{margin-top:1.25rem}.two-columns-featured-item .header div.c7wp-wrap form div:first-of-type{margin-bottom:1.25rem}@media only screen and (max-width: 640px){.two-columns-featured-item .row.header>.columns:first-child{padding-left:0;padding-right:0}.two-columns-featured-item .row.header>.columns:last-child{padding:2.5rem 3.125rem}}@media only screen and (min-width: 1025px){.two-columns-featured-item .columns.featured-item:nth-child(1):last-child{-webkit-flex:0 0 66.6667%;-ms-flex:0 0 66.6667%;flex:0 0 66.6667%;max-width:66.6667%}}
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/_two-col-featured-item.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.two-columns-featured-item .header {
+  padding: 0rem 0rem 0rem;
+  height: 100%;
+}
+.two-columns-featured-item .header .columns {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.two-columns-featured-item .header .columns.image {
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+}
+.two-columns-featured-item .header .columns.image img {
+  height: 100%;
+  object-fit: cover;
+}
+.two-columns-featured-item .header .columns.image img.bottle-shot {
+  height: 24.6875rem;
+}
+.two-columns-featured-item .header .columns.content {
+  padding-top: 3.75rem;
+  padding-bottom: 2.5rem;
+  justify-content: flex-start;
+}
+.two-columns-featured-item .header a:not(.button):not(.button-black-700-solid), .two-columns-featured-item .header a:visited:not(.button):not(.button-black-700-solid) {
+  color: inherit;
+}
+.two-columns-featured-item .header a:not(.button):not(.button-black-700-solid):hover, .two-columns-featured-item .header a:visited:not(.button):not(.button-black-700-solid):hover {
+  color: #595959;
+  text-decoration: none;
+}
+.two-columns-featured-item .header h3 {
+  font-size: 2.25rem;
+  line-height: 1.35;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 0.9375rem;
+  line-height: 1.1;
+}
+@media only screen and (max-width: 1440px) {
+  .two-columns-featured-item .header h3 {
+    font-size: 2.125rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .two-columns-featured-item .header h3 {
+    font-size: 1.875rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .two-columns-featured-item .header h3 {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem;
+  }
+}
+.two-columns-featured-item .header h4 {
+  font-size: 1.0625rem;
+  margin-bottom: 1.25rem;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+.two-columns-featured-item .header h5 {
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+.two-columns-featured-item .header h5.harvest {
+  color: #595959;
+}
+.two-columns-featured-item .header form {
+  margin-top: 1rem;
+}
+.two-columns-featured-item .header div.c7wp-wrap {
+  margin-top: 0rem;
+}
+.two-columns-featured-item .header div.c7wp-wrap form {
+  margin-top: 1.25rem;
+}
+.two-columns-featured-item .header div.c7wp-wrap form div:first-of-type {
+  margin-bottom: 1.25rem;
+}
+@media only screen and (max-width: 640px) {
+  .two-columns-featured-item .row.header > .columns:first-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .two-columns-featured-item .row.header > .columns:last-child {
+    padding: 2.5rem 3.125rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .two-columns-featured-item .columns.featured-item:nth-child(1):last-child {
+    -webkit-flex: 0 0 66.6667%;
+    -ms-flex: 0 0 66.6667%;
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+  }
+}
 
 /*# sourceMappingURL=two-col-featured-item.css.map*/

@@ -8,3 +8,9 @@ import './sass/editor.scss';
 import './js/modal';
 
 import './js/tabs';
+
+
+// import './icons/check.svg';
+// import './icons/cross.svg';
+// import './icons/facebook.svg';
+// import './icons/search.svg';

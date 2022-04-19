@@ -9,3 +9,8 @@ import './js/modal';
 import './js/form-utms';
 import './js/tabs';
 import './js/ga-tracking';
+
+// import './icons/check.svg';
+// import './icons/cross.svg';
+// import './icons/facebook.svg';
+// import './icons/search.svg';

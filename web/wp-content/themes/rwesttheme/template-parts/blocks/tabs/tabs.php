@@ -43,7 +43,7 @@ $background_color = get_field('tabs_background_color');
         ?>
             <div class="row tabs-filter">
                 <?php while (have_rows('tabs')) : the_row();
-                    $icon_path = get_template_directory_uri() . '/src/icons/' . get_sub_field('tab_icon') . '.svg';
+                    $icon_path = get_template_directory_uri() . '/static-assets/icons/' . get_sub_field('tab_icon') . '.svg';
                     $tab_label_option = get_sub_field('tab_label_option');
                     $tab_label = get_sub_field('tab_label');
                 ?>
@@ -77,7 +77,7 @@ $background_color = get_field('tabs_background_color');
 
                     $tab_label_option = get_sub_field('tab_label_option');
                     if ($tab_label_option !== 'text') {
-                        $icon_path = get_template_directory() . '/src/icons/' . get_sub_field('tab_icon') . '.svg';
+                        $icon_path = get_template_directory() . '/static-assets/icons/' . get_sub_field('tab_icon') . '.svg';
                     }
 
                     $tab_media_option = get_sub_field('tab_media_option');

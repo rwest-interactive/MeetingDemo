@@ -32,7 +32,7 @@ function getFiles($path){
 
 
 // this is where we are keeping the svgs currently KR 9-15-12
-$dir = get_template_directory().'/src/icons/';
+$dir = get_template_directory().'/static-assets/icons/';
 $it = new RecursiveDirectoryIterator($dir);
 
 

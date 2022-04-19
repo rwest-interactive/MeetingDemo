@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * dynamic icons
+ */
+require get_template_directory() . '/inc/acf_icons.php';
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -40,16 +44,12 @@ require get_template_directory() . '/inc/blocks.php';
  */
 // require get_template_directory() . '/inc/batch-form.php';
 
-/**
- * dynamic icons
- */
-// require get_template_directory() . '/inc/acf_icons.php';
 
 
 /**
  * Add Theme Support
  */
-add_theme_support('post-thumbnails');
+add_theme_support( 'post-thumbnails' );
 
 // /**
 //  * Register Image Sizes
@@ -64,7 +64,7 @@ add_image_size('extra-large', 2880, 2880, false);
 /**
  * Add ACF Options Page
  */
-if (function_exists('acf_add_options_page')) {
+if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 }
 
@@ -73,48 +73,44 @@ if (function_exists('acf_add_options_page')) {
 /**
  * Enqueue Styles & Scripts
  */
-function rwest_load_scripts($hook)
-{
-    wp_register_script('rwest-main-js', get_template_directory_uri() . '/build/main.js', array('jquery'), filemtime(get_parent_theme_file_path() . '/build/main.js'), true);
-    wp_enqueue_script('rwest-main-js');
-    wp_enqueue_style('rwest-main-css', get_template_directory_uri() . '/build/main.css', false, filemtime(get_parent_theme_file_path() . '/build/main.css'));
+function rwest_load_scripts($hook) {
+    wp_register_script( 'rwest-main-js', get_template_directory_uri() . '/build/main.js', array( 'jquery' ), filemtime( get_parent_theme_file_path().'/build/main.js' ) ,true );
+    wp_enqueue_script( 'rwest-main-js' );
+    wp_enqueue_style( 'rwest-main-css', get_template_directory_uri() . '/build/main.css', false, filemtime(get_parent_theme_file_path() . '/build/main.css') );
 }
 add_action('wp_enqueue_scripts', 'rwest_load_scripts');
 
 /**
  * Admin Enqueue Styles & Scripts
  */
-function rwest_enqueue_in_admin()
-{
+function rwest_enqueue_in_admin() {
     $current_screen = get_current_screen();
-    wp_register_script('rwest-main-js', get_template_directory_uri() . '/build/main.js', array('jquery'), filemtime(get_parent_theme_file_path() . '/build/main.js'), true);
-    wp_enqueue_script('rwest-main-js');
-    wp_enqueue_style('rwest-editor-css', get_template_directory_uri() . '/build/editor.css', false, filemtime(get_parent_theme_file_path() . '/build/editor.css'));
+    wp_register_script( 'rwest-main-js', get_template_directory_uri() . '/build/main.js', array( 'jquery' ), filemtime( get_parent_theme_file_path().'/build/main.js' ) ,true );
+    wp_enqueue_script( 'rwest-main-js' );
+    wp_enqueue_style( 'rwest-editor-css', get_template_directory_uri() . '/build/editor.css', false, filemtime(get_parent_theme_file_path() . '/build/editor.css') );
 }
-add_action('admin_enqueue_scripts', 'rwest_enqueue_in_admin');
+add_action( 'admin_enqueue_scripts', 'rwest_enqueue_in_admin' );
 
 
 //TODO
 // what is wpb? should we change this to rwest
-function wpb_hidetitle_class($classes)
-{
-    // if ( is_single() || is_page() ) :
+function wpb_hidetitle_class($classes) {
+  // if ( is_single() || is_page() ) :
     $classes[] = 'hide-title';
     return $classes;
-    // endif;
-    // return $classes;
+  // endif;
+// return $classes;
 }
 add_filter('post_class', 'wpb_hidetitle_class');
 
 
 //TODO
 // 'xxx'=archive placeholder, rename or delete function as needed
-add_action('pre_get_posts', 'rwest_pre_get_post');
+add_action( 'pre_get_posts', 'rwest_pre_get_post' );
 // Show all Projects on Projects Archive Page
-function rwest_pre_get_post($query)
-{
-    if (!is_admin() && $query->is_main_query() && is_post_type_archive('xxx')) {
-        $query->set('posts_per_page', '-1');
+function rwest_pre_get_post( $query ) {
+    if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'xxx' ) ) {
+            $query->set( 'posts_per_page', '-1' );
     }
 }
 
@@ -170,28 +166,28 @@ function rwest_pre_get_post($query)
  *
  * @return echo The HTML picture object
  */
-function adaptiveImage($image_object, $is_custom = false)
+function adaptiveImage($image_object, $is_custom=false)
 {
-    if ($is_custom) {
+    if($is_custom) {
         $picture = '<picture>';
 
         foreach ($image_object as $key => $value) {
 
-            if ($key != 'default' && $key != 'alt') {
+            if($key != 'default' && $key != 'alt') {
                 $picture .= '<source media="(max-width: ' . $key . 'px)" srcset="' . $value . '">';
             } else {
                 // $picture .= '<img src="'. $value .'" alt="'. $image_object['alt'].'">';
             }
         }
 
-        $picture .= '<img src="' . $image_object['default'] . '" alt="' . $image_object['alt'] . '">';
+        $picture .= '<img src="'.$image_object['default']. '" alt="' . $image_object['alt'] . '">';
         $picture .= '</picture>';
     } else {
         $picture = '
             <picture>
                 <source media="(max-width: 400px)" srcset="' . $image_object['sizes']['medium'] . '">
                 <source media="(max-width: 640px)" srcset="' . $image_object['sizes']['medium-large'] . '">
-                <source media="(max-width: 720px)" srcset="' . $image_object['sizes']['medium-large'] . ', ' . $image_object['sizes']['large'] . ' 2x">
+                <source media="(max-width: 720px)" srcset="' . $image_object['sizes']['medium-large'] . ', '.$image_object['sizes']['large'].' 2x">
                 <source media="(max-width: 1440px)" srcset="' . $image_object['sizes']['large'] . ', ' . $image_object['sizes']['extra-large'] . ' 2x">
                 <img src="' . $image_object['sizes']['extra-large'] . '" alt="' . $image_object['alt'] . '">
             </picture>';
@@ -241,27 +237,24 @@ function adaptiveImage($image_object, $is_custom = false)
 // function setNewsletterPopupCookie( $entry, $form ) {
 //     setcookie( 'oneks_exit_popup', 'hide_popup', time()+60*60*24*30, '/');
 // }
-add_action('restrict_manage_posts', 'simple_block_type_search', 10, 2);
+add_action( 'restrict_manage_posts', 'simple_block_type_search', 10, 2 );
 
-function simple_block_type_search($post_type, $which)
-{
-    if (!use_block_editor_for_post_type($post_type)) {
+function simple_block_type_search ( $post_type, $which ) {
+    if ( ! use_block_editor_for_post_type ( $post_type ) ) {
         return;
     }
     $block_types = \WP_Block_Type_Registry::get_instance()->get_all_registered();
-    $options = array_reduce($block_types, function ($options, $block_type) {
-        $val = '!-- wp:' . str_replace('core/', '', $block_type->name) . ' ';
-        return $options . sprintf(
-            '<option value="%s" %s>%s</option>',
-            esc_attr($val),
-            selected(get_query_var('s'), $val, false),
-            esc_html($block_type->name)
+    $options = array_reduce( $block_types, function( $options, $block_type ) {
+        $val = '!-- wp:' . str_replace( 'core/', '', $block_type->name ) . ' ';
+        return $options . sprintf ( '<option value="%s" %s>%s</option>',
+            esc_attr( $val ),
+            selected( get_query_var( 's' ), $val, false ),
+            esc_html( $block_type->name )
         );
-    }, '');
-    printf(
-        '<select name="s"><option value="">%s</option>%s</select>
+    }, '' );
+    printf ( '<select name="s"><option value="">%s</option>%s</select>
               <input type="hidden" name="sentence" value="1"/>',
-        esc_html__('Block Type Search', 'simple_block_type_search'),
-        $options
+         esc_html__( 'Block Type Search', 'simple_block_type_search' ),
+         $options
     );
 }

@@ -150,7 +150,8 @@
                         "check": "check",
                         "cross": "cross",
                         "facebook": "facebook",
-                        "search": "search"
+                        "search": "search",
+                        "slick": "slick"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -388,5 +389,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649800835
+    "modified": 1650323831
 }

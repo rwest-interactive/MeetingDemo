@@ -1,3 +1,208 @@
-.tabs .row{margin:auto}.tabs .row .row{margin:0}.tabs .columns{display:flex;flex-flow:column nowrap;justify-content:flex-start;padding:0}.tabs .columns span{display:flex;transition:all .3s ease-in-out;cursor:pointer;font-size:1.125rem;align-self:stretch;min-height:100%;align-items:center;justify-content:center;padding:0 1.875rem}.tabs .columns span.is-active,.tabs .columns span:hover{background-color:#434343;text-decoration:none}.tabs .icon-text-group{justify-content:center}@media only screen and (max-width: 640px){.tabs .icon-text-group{align-items:center;margin-bottom:0}}.tabs .columns:last-child{padding-right:0}.tabs .columns:last-child{padding-right:0}.tabs .placeholder-button{width:21.625rem;height:3.25rem;padding:0.75rem 2.5rem 0.375rem;margin-bottom:1rem;visibility:hidden}.tabs .tabs-heading{text-align:center;padding:2.5rem 1rem 3.75rem}.tabs .tabs-filter{min-height:4.6875rem;background-color:#e7ebf1}.tabs .tabs-filter .columns{display:flex;flex-direction:row;justify-content:center;background-color:#e7ebf1}.tabs .tabs-filter span{display:flex;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;transition:all .3s ease;align-self:stretch;width:100%;min-height:100%;align-items:center;justify-content:center;cursor:pointer;font-size:0.875rem;line-height:0.875rem;padding:1.875rem 1.25rem;letter-spacing:.75px;font-weight:600;color:#000}.tabs .tabs-filter span.is-active{background-color:#434343;color:#fff}.tabs .tabs-filter svg{width:50px;height:50px}.tabs .tabs-list .row{min-width:100%}.tabs .tab{display:none}.tabs .tab.is-active{display:flex}.tabs .tab-icon{align-self:center}.tabs .tab-content{background-color:#5d5d5d;padding:3rem 2rem;margin:0 auto;max-width:70.625rem}.tabs .tab-content h2{align-self:center;font-size:1.875rem}@media only screen and (max-width: 640px){.tabs .tab-content h2{margin-bottom:0.625rem;margin-top:0.625rem}}.tabs .tab-content ol{list-style:none;align-self:flex-start;width:100%}.tabs .tab-content ol li{padding-bottom:1.5rem;width:100%}.tabs .tab-content ol span{display:flex;width:100%;overflow:hidden;padding:0;pointer-events:none}.tabs .tab-content ol span:hover{background-color:rgba(0,0,0,0)}.tabs .tab-content a.button{text-align:center;padding:1rem;color:#000;background-color:#e7ebf1;border:none}.tabs .tab-content a.button:hover{color:#fff;background-color:#595959}.tabs .tab svg,.tabs .tab img.icon{width:50px;height:50px;flex-shrink:0}.tabs .tab path{fill:#fff}.tabs .tab-media{position:relative;overflow:hidden}.tabs .tab-media.bg-image,.tabs .tab-media.video{padding-bottom:56.25%}.tabs .tab-media video{position:absolute;width:100%;height:100%;top:0;left:0;bottom:0;right:0;object-fit:cover}
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/_tabs.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.tabs .row {
+  margin: auto;
+}
+.tabs .row .row {
+  margin: 0;
+}
+.tabs .columns {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 0;
+}
+.tabs .columns span {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 1.125rem;
+  align-self: stretch;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.875rem;
+}
+.tabs .columns span.is-active,
+.tabs .columns span:hover {
+  background-color: #434343;
+  text-decoration: none;
+}
+.tabs .icon-text-group {
+  justify-content: center;
+}
+@media only screen and (max-width: 640px) {
+  .tabs .icon-text-group {
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+.tabs .columns:last-child {
+  padding-right: 0;
+}
+.tabs .columns:last-child {
+  padding-right: 0;
+}
+.tabs .placeholder-button {
+  width: 21.625rem;
+  height: 3.25rem;
+  padding: 0.75rem 2.5rem 0.375rem;
+  margin-bottom: 1rem;
+  visibility: hidden;
+}
+.tabs .tabs-heading {
+  text-align: center;
+  padding: 2.5rem 1rem 3.75rem;
+}
+.tabs .tabs-filter {
+  min-height: 4.6875rem;
+  background-color: #e7ebf1;
+}
+.tabs .tabs-filter .columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e7ebf1;
+}
+.tabs .tabs-filter span {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  transition: all 0.3s ease;
+  align-self: stretch;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  padding: 1.875rem 1.25rem;
+  letter-spacing: 0.75px;
+  font-weight: 600;
+  color: #000000;
+}
+.tabs .tabs-filter span.is-active {
+  background-color: #434343;
+  color: #fff;
+}
+.tabs .tabs-filter svg {
+  width: 50px;
+  height: 50px;
+}
+.tabs .tabs-list .row {
+  min-width: 100%;
+}
+.tabs .tab {
+  display: none;
+}
+.tabs .tab.is-active {
+  display: flex;
+}
+.tabs .tab-icon {
+  align-self: center;
+}
+.tabs .tab-content {
+  background-color: #5d5d5d;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 70.625rem;
+}
+.tabs .tab-content h2 {
+  align-self: center;
+  font-size: 1.875rem;
+}
+@media only screen and (max-width: 640px) {
+  .tabs .tab-content h2 {
+    margin-bottom: 0.625rem;
+    margin-top: 0.625rem;
+  }
+}
+.tabs .tab-content ol {
+  list-style: none;
+  align-self: flex-start;
+  width: 100%;
+}
+.tabs .tab-content ol li {
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+.tabs .tab-content ol span {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+}
+.tabs .tab-content ol span:hover {
+  background-color: transparent;
+}
+.tabs .tab-content a.button {
+  text-align: center;
+  padding: 1rem;
+  color: #000000;
+  background-color: #E7EBF1;
+  border: none;
+}
+.tabs .tab-content a.button:hover {
+  color: #fff;
+  background-color: #595959;
+}
+.tabs .tab svg, .tabs .tab img.icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.tabs .tab path {
+  fill: #fff;
+}
+.tabs .tab-media {
+  position: relative;
+  overflow: hidden;
+}
+.tabs .tab-media.bg-image, .tabs .tab-media.video {
+  padding-bottom: 56.25%;
+}
+.tabs .tab-media video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=tabs.css.map*/

@@ -27,7 +27,7 @@ function rwest_acf_init_block_types() {
             // 'align'			=> false,
             'anchor'		=> true,
             'customClassName'	=> true,
-            'jsx' 			=> true,
+            // 'jsx' 			=> true,
           ]
         ));
         acf_register_block_type(array(

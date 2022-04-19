@@ -1,3 +1,59 @@
-.single-post-content{padding:5rem 1.875rem 1.875rem}.single-post-content .block-inner{padding:3.125rem 5rem;max-width:1200px;border:1px solid #595959}.single-post-content .columns{display:flex;flex-flow:column;align-items:flex-start;justify-content:center}.single-post-content .columns>h1,.single-post-content .columns>h2,.single-post-content .columns>h3{margin-bottom:1.25rem}@media only screen and (max-width: 640px){.single-post-content{padding:1.875rem}.single-post-content .block-inner{padding:1.875rem}}
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/_single-post-content.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.single-post-content {
+  padding: 5rem 1.875rem 1.875rem;
+}
+.single-post-content .block-inner {
+  padding: 3.125rem 5rem;
+  max-width: 1200px;
+  border: 1px solid #595959;
+}
+.single-post-content .columns {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.single-post-content .columns > h1, .single-post-content .columns > h2, .single-post-content .columns > h3 {
+  margin-bottom: 1.25rem;
+}
+@media only screen and (max-width: 640px) {
+  .single-post-content {
+    padding: 1.875rem;
+  }
+  .single-post-content .block-inner {
+    padding: 1.875rem;
+  }
+}
 
 /*# sourceMappingURL=single-post-content.css.map*/

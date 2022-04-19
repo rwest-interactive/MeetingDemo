@@ -1,3 +1,134 @@
-.hero *{color:#fff}.hero .block-inner{padding:4.6875rem;display:flex !important;align-items:flex-end;padding:4.6875rem;height:100%;max-width:none}@media only screen and (max-width: 640px){.hero .block-inner{padding:0}}@media screen and (min-width: 641px)and (min-height: 450px){.hero .block-inner{min-height:40vh}}@media only screen and (min-width: 1025px){.hero .block-inner{min-height:70vh}}@media only screen and (min-width: 641px){.hero .block-inner{max-height:56.25rem}}.hero .columns{display:flex;flex-flow:column;align-items:flex-start;justify-content:center}@media only screen and (max-width: 640px){.hero .columns{padding:0}}.hero .content{max-width:31.25rem;position:relative}@media only screen and (min-width: 1025px){.hero .content{max-width:53.125rem}}@media screen and (min-width: 1025px)and (min-height: 800px){.hero .content{bottom:3.75rem}}@media only screen and (max-width: 640px){.hero .content{padding:3.125rem}}.hero .content h1{font-family:"Unna",sans-serif;font-size:4.5rem;line-height:1.1;letter-spacing:2px;font-weight:700}@media only screen and (max-width: 640px){.hero .content h1{font-size:2.25rem}}.hero .content h1.smaller{font-size:3rem;line-height:1.25}@media only screen and (max-width: 640px){.hero .content h1.smaller{font-size:1.5rem}}.hero .content p{margin:1rem 0}@media only screen and (min-width: 1025px){.hero .content p{max-width:31.25rem}}@media only screen and (max-width: 640px){.hero:not(.single-post-hero){background-image:none !important}}@media only screen and (min-width: 641px){.hero img.mobile-only{display:none}}
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/_hero.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.hero * {
+  color: #fff;
+}
+.hero .block-inner {
+  padding: 4.6875rem;
+  display: flex !important;
+  align-items: flex-end;
+  padding: 4.6875rem;
+  height: 100%;
+  max-width: none;
+}
+@media only screen and (max-width: 640px) {
+  .hero .block-inner {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 641px) and (min-height: 450px) {
+  .hero .block-inner {
+    min-height: 40vh;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero .block-inner {
+    min-height: 70vh;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .hero .block-inner {
+    max-height: 56.25rem;
+  }
+}
+.hero .columns {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media only screen and (max-width: 640px) {
+  .hero .columns {
+    padding: 0;
+  }
+}
+.hero .content {
+  max-width: 31.25rem;
+  position: relative;
+}
+@media only screen and (min-width: 1025px) {
+  .hero .content {
+    max-width: 53.125rem;
+  }
+}
+@media screen and (min-width: 1025px) and (min-height: 800px) {
+  .hero .content {
+    bottom: 3.75rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .hero .content {
+    padding: 3.125rem;
+  }
+}
+.hero .content h1 {
+  font-family: "Unna", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 640px) {
+  .hero .content h1 {
+    font-size: 2.25rem;
+  }
+}
+.hero .content h1.smaller {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+@media only screen and (max-width: 640px) {
+  .hero .content h1.smaller {
+    font-size: 1.5rem;
+  }
+}
+.hero .content p {
+  margin: 1rem 0;
+}
+@media only screen and (min-width: 1025px) {
+  .hero .content p {
+    max-width: 31.25rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .hero:not(.single-post-hero) {
+    background-image: none !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .hero img.mobile-only {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=hero.css.map*/
