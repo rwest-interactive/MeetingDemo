@@ -1,3 +1,4 @@
-.wp-block{max-width:100%}.three-columns-content.block .block-inner{padding:3.125rem}@media only screen and (max-width: 640px){.three-columns-content.block .columns{padding-bottom:2.5rem}}
+.wp-block{max-width:100%}.three-columns-content.block .block-inner{padding:calc($px/$rembase)rem}@media only screen and (max-width: 640px){.three-columns-content.block .columns{padding-bottom:calc($px/$rembase)rem}}
+
 
 /*# sourceMappingURL=three-columns-content.css.map*/
