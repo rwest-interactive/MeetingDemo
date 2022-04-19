@@ -104,7 +104,7 @@ jobs:
           command: cd ./web/wp-content/themes/rwesttheme && npm ci
       - run:
           name: Compiling SCSS to CSS
-          command: cd ./web/wp-content/themes/rwesttheme && npm run webpack --mode development
+          command: cd ./web/wp-content/themes/rwesttheme && npm run deploy
       - persist_to_workspace:
           root: .
           paths:
