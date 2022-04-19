@@ -107,7 +107,7 @@ jobs:
           command: cd ./web/wp-content/themes/rwesttheme && npm run build
       - run:
           name: Removing source directory (dev assets)
-          command: cd ./web/wp-content/themes/rwesttheme && rmdir src
+          command: cd ./web/wp-content/themes/rwesttheme && rm src
       - persist_to_workspace:
           root: .
           paths:
