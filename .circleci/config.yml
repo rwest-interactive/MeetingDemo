@@ -32,7 +32,7 @@ defaults: &defaults
     #======================================================================================================================================
 
     NOTIFY: 'scripts/github/add-commit-comment {project} {sha} "Created multidev environment [{site}#{env}]({dashboard-url})." {site-url}'
-    ADMIN_USERNAME: rwest_admin
+    ADMIN_USERNAME: admin
     TERM: dumb
 
 version: 2
@@ -96,15 +96,15 @@ jobs:
   # containing the compiled files for reuse in the deploy_to_pantheon job.
   build_theme:
     docker:
-      - image: node:17.0.0
+      - image: node:17.8.0
     steps:
       - checkout
       - run:
           name: Installing NPM dependencies in rwesttheme theme
           command: cd ./web/wp-content/themes/rwesttheme && npm ci
       - run:
-          name: Compiling SCSS to CSS
-          command: cd ./web/wp-content/themes/rwesttheme && npm run deploy
+          name: Compiling SCSS to CSS and minifying JS with Webpack
+          command: cd ./web/wp-content/themes/rwesttheme && npm run dev
       - persist_to_workspace:
           root: .
           paths:
