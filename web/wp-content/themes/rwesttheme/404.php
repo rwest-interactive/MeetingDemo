@@ -18,7 +18,7 @@ get_header();
 		<div class="page-content">
 			<div class="row">
 				<div class="columns small-12 large-6">
-					<h1>404 (Page Not Found)</h1>
+					<h1>404</h1>
 				</div>
 				<div class="columns small-12 large-6">
 					<h2>Oops!</h2>
