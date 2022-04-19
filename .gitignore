@@ -24,8 +24,7 @@ web/wp-content/plugins/*
 !web/wp-content/plugins/.gitkeep
 !web/wp-content/themes
 web/wp-content/themes/*
-!web/wp-content/themes/custom/
-web/wp-content/themes/custom/*
+!web/wp-content/themes/rwesttheme/
 !web/wp-content/themes/.gitkeep
 !web/wp-content/config/
 web/wp
@@ -40,12 +39,8 @@ web/private/scripts/quicksilver
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
 
-# web/wp-content/themes/custom/rwesttheme/main.js
-
-# Workspace #
-##############
-*.code-workspace
-node_modules/
+# Ignore everything in the rwest theme build folder
+web/wp-content/themes/rwesttheme/build/
 
 # :::::::::::::::::::::: cut ::::::::::::::::::::::
 
