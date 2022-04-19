@@ -112,7 +112,7 @@ jobs:
           root: .
           paths:
             - web/wp-content/themes/rwesttheme/build
-            - web/wp-content/themes/rwesttheme/node_modules
+            # - web/wp-content/themes/rwesttheme/node_modules
 
   deploy_to_pantheon:
     <<: *defaults
