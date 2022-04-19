@@ -141,9 +141,9 @@ workflows:
   build_deploy_and_test:
     jobs:
       - configure_env_vars
-      - build_theme
       - build_php
+      - build_theme
       - deploy_to_pantheon:
           requires:
-            - build_theme
             - build_php
+            - build_theme
