@@ -20,7 +20,7 @@
       "type": "package",
       "package": {
         "name": "gravityforms/gravityforms",
-        "version": "2.4.21.3",
+        "version": "2.6.1.3",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -51,13 +51,8 @@
     "yoast/wordpress-seo": "^18.4"
   },
   "require-dev": {
-    "behat/mink-goutte-driver": "^1.2.1",
     "brain/monkey": "^2.2.0",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-    "dmore/behat-chrome-extension": "^1.2",
-    "genesis/behat-fail-aid": "^2.1",
-    "paulgibbs/behat-wordpress-extension": "^3.3.0",
-    "phpunit/phpunit": "^7.5.1",
     "roave/security-advisories": "dev-master",
     "squizlabs/php_codesniffer": "^3.4.0",
     "wp-coding-standards/wpcs": "^1.2.1"
@@ -97,8 +92,7 @@
   "autoload": {
     "classmap": [
       "scripts/composer/ScriptHandler.php"
-    ],
-    "psr-4": { "PantheonSystems\\WordHatHelpers\\": "tests/behat/helper_classes/" }
+    ]
   },
   "scripts": {
     "build-assets": [
@@ -123,9 +117,6 @@
     ],
     "code-sniff": [
       "./vendor/bin/phpcs --standard=WordPress ./web/wp-content"
-    ],
-    "unit-test": [
-      "./vendor/bin/phpunit tests/unit/*"
     ],
     "lint": "find web/wp-content -name '*.php' -exec php -l {} \\;"
   }

@@ -32,7 +32,7 @@ defaults: &defaults
     #======================================================================================================================================
 
     NOTIFY: 'scripts/github/add-commit-comment {project} {sha} "Created multidev environment [{site}#{env}]({dashboard-url})." {site-url}'
-    ADMIN_USERNAME: admin
+    ADMIN_USERNAME: rwest_admin
     TERM: dumb
 
 version: 2
