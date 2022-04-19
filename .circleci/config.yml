@@ -105,14 +105,10 @@ jobs:
       - run:
           name: Compiling SCSS to CSS and minifying JS with Webpack
           command: cd ./web/wp-content/themes/rwesttheme && npm run build
-      # - run:
-      #     name: Removing source directory (dev assets)
-      #     command: cd ./web/wp-content/themes/rwesttheme && rm -rf src
       - persist_to_workspace:
           root: .
           paths:
             - web/wp-content/themes/rwesttheme/build
-            # - web/wp-content/themes/rwesttheme/node_modules
 
   deploy_to_pantheon:
     <<: *defaults
