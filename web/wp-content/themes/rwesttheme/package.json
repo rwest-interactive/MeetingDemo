@@ -28,8 +28,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch",
-    "deploy": "webpack --mode development"
+    "dev": "webpack --mode development --watch"
   },
   "babel": {
     "presets": [
