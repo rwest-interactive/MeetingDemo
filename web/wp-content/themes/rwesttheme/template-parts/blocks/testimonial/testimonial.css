@@ -1,3 +1,58 @@
-.testimonial{padding:3rem 0}.testimonial h3{text-align:center;width:100%;margin-bottom:1rem}.testimonial .row{max-width:37.5rem}.testimonial .columns{display:flex;align-items:center;justify-content:center;flex-flow:column}.testimonial blockquote{margin:0}.testimonial.generations{padding:20px 0 20px}
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/testimonial/_testimonial.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.testimonial {
+  padding: 3rem 0;
+}
+.testimonial h3 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.testimonial .row {
+  max-width: 37.5rem;
+}
+.testimonial .columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.testimonial blockquote {
+  margin: 0;
+}
+
+.testimonial.generations {
+  padding: 20px 0 20px;
+}
 
 /*# sourceMappingURL=testimonial.css.map*/

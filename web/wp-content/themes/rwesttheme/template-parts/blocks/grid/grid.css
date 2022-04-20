@@ -1,3 +1,67 @@
-.grid .grid-item{padding-top:1.875rem}@media only screen and (max-width: 640px){.grid .grid-item{padding-left:0;padding-right:0}}.grid .grid-item .grid-item-inner{background-color:#e7ebf1;margin:0;padding-top:2.1875rem;padding-bottom:1.25rem}.grid .grid-item .grid-item-inner .columns a.title,.grid .grid-item .grid-item-inner .columns h3{font-family:"Unna",sans-serif;color:#090a0f;font-size:40px;font-weight:700;letter-spacing:2px;line-height:1.25;font-style:normal}.grid .grid-item .grid-item-inner .columns p{font-family:"Montserrat";color:#090a0f}.grid.generations{padding:20px 0 20px}
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/grid/_grid.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.grid .grid-item {
+  padding-top: 1.875rem;
+}
+@media only screen and (max-width: 640px) {
+  .grid .grid-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.grid .grid-item .grid-item-inner {
+  background-color: #E7EBF1;
+  margin: 0;
+  padding-top: 2.1875rem;
+  padding-bottom: 1.25rem;
+}
+.grid .grid-item .grid-item-inner .columns a.title,
+.grid .grid-item .grid-item-inner .columns h3 {
+  font-family: "Unna", sans-serif;
+  color: #090a0f;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.25;
+  font-style: normal;
+}
+.grid .grid-item .grid-item-inner .columns p {
+  font-family: "Montserrat";
+  color: #090a0f;
+}
+
+.grid.generations {
+  padding: 20px 0 20px;
+}
 
 /*# sourceMappingURL=grid.css.map*/

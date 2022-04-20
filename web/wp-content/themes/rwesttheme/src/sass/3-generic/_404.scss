@@ -1,6 +1,7 @@
 body.error404 {
   .page-content {
     padding: rem(40);
+    margin:100px !important;
     border-top: rem(10) solid $gray-primary;
     @include media-min($medium) {
       padding: rem(60);

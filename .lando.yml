@@ -1,5 +1,5 @@
 # Lando config file.
-# Uses pantheon recipe: https://docs.lando.dev/config/pantheon.html#getting-started  
+# Uses pantheon recipe: https://docs.lando.dev/config/pantheon.html#getting-started
 name: meetingdemo
 recipe: pantheon
 config:
@@ -60,11 +60,6 @@ services:
     type: mariadb:10.4
   node:
     type: node:16
-    # BUILD CHILD THEME CSS & JS HERE
-    # build:
-    #   - cd /app/web/themes/custom/meetingdemo && npm install
-    #   - cd /app/web/themes/custom/meetingdemo && npm rebuild node-sass
-    #   - cd /app/web/themes/custom/meetingdemo && gulp build
   selenium-chrome:
     type: compose
     app_mount: false
@@ -101,6 +96,11 @@ tooling:
     service: node
   node:
     service: node
+  webpack:
+    service: node
+    cmd:
+      - cd /app/web/wp-content/themes/rwesttheme && npm install
+      - cd /app/web/wp-content/themes/rwesttheme && npm run dev
   # See: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage
   code-sniff:
     service: appserver

@@ -1,3 +1,78 @@
-.single-column-content.block{background-size:cover;background-repeat:no-repeat;background-position:center;display:block;width:100%;position:relative}.single-column-content.block .overlay{position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0}.single-column-content.block .block-inner{position:relative;padding:2rem 0}.single-column-content.block .columns{padding:0rem 4.6875rem;text-align:center;margin-left:auto;margin-right:auto}@media only screen and (max-width: 640px){.single-column-content.block .columns{padding:0rem 3.125rem}}.single-column-content.block.alignleft .columns{text-align:left;margin-left:0}.single-column-content.block.alignright .columns{text-align:right;margin-right:0}.single-column-content.generations{padding:20px 0 20px}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/single-column-content/_single-column-content.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.single-column-content.block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.single-column-content.block .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.single-column-content.block .block-inner {
+  position: relative;
+  padding: 2rem 0;
+}
+.single-column-content.block .columns {
+  padding: 0rem 4.6875rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 640px) {
+  .single-column-content.block .columns {
+    padding: 0rem 3.125rem;
+  }
+}
+.single-column-content.block.alignleft .columns {
+  text-align: left;
+  margin-left: 0;
+}
+.single-column-content.block.alignright .columns {
+  text-align: right;
+  margin-right: 0;
+}
+
+.single-column-content.generations {
+  padding: 20px 0 20px;
+}
 
 /*# sourceMappingURL=single-column-content.css.map*/

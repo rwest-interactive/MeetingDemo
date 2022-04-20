@@ -1,3 +1,221 @@
-.hero-slider{max-width:none;position:relative;overflow:hidden;z-index:1}@media only screen and (min-width: 641px){.hero-slider img.mobile-only,.hero-slider video.mobile-only{display:none}}@media screen and (min-width: 641px)and (min-height: 450px){.hero-slider{height:70vh;min-height:500px}}@media only screen and (min-width: 641px){.hero-slider{max-height:56.25rem}}.hero-slider .content{position:relative;z-index:1;max-width:31.25rem}@media only screen and (max-width: 640px){.hero-slider .content{padding:3.125rem 3.125rem 5rem 3.125rem}}@media screen and (min-width: 768px)and (min-height: 800px){.hero-slider .content{bottom:3.75rem}}@media only screen and (min-width: 1025px){.hero-slider .content{max-width:53.125rem}}.hero-slider .content *{color:#090a0f}.hero-slider .content h1{font-size:4.5rem;line-height:1.1;letter-spacing:0.25rem}.hero-slider .content h1.smaller{font-size:3rem;line-height:1.25}@media only screen and (max-width: 640px){.hero-slider .content h1.smaller{font-size:1.5rem}}@media only screen and (max-width: 640px){.hero-slider .content h1{font-size:2.25rem;line-height:1.35;letter-spacing:2px}}.hero-slider .content p{margin:1rem 0}@media only screen and (min-width: 1025px){.hero-slider .content p{max-width:31.25rem}}.hero-slider .slider,.hero-slider .slick-list,.hero-slider .slick-track,.hero-slider .slick-slide,.hero-slider .slick-slide>div{text-align:inherit}@media only screen and (min-width: 641px){.hero-slider .slider,.hero-slider .slick-list,.hero-slider .slick-track,.hero-slider .slick-slide,.hero-slider .slick-slide>div{height:100% !important}}.hero-slider .slick-slide{padding:0}.hero-slider .row{max-width:none;display:flex !important;align-items:flex-end;padding:4.6875rem;position:relative;overflow:hidden}@media only screen and (max-width: 640px){.hero-slider .row{padding:0}.hero-slider .row .screen{display:none}.hero-slider .row img{height:35vh;min-height:12.5rem;object-fit:cover;width:100%}}@media only screen and (min-width: 641px){.hero-slider .row{height:100%}}@media only screen and (max-width: 640px){.hero-slider .row.bg-image{background:none;background-image:none !important}}@media only screen and (min-width: 641px){.hero-slider .row.bg-image{padding:4.6875rem}}.hero-slider .align-right .columns{text-align:right}.hero-slider .align-right .columns p{margin-right:0;margin-left:auto}.hero-slider .align-center .columns{text-align:center}.hero-slider .align-center .columns p{margin-left:auto;margin-right:auto}.hero-slider video{width:100%;height:auto;display:none}@media only screen and (min-width: 641px){.hero-slider video{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;min-width:100%;min-height:100%;width:auto;z-index:1;display:block}}.light *{color:#fff}@media only screen and (min-width: 641px){.dark *{color:#090a0f}.dark .button,.dark .button:visited{border-color:#090a0f;color:#090a0f}.dark .button:hover,.dark .button:focus,.dark .button:visited:hover,.dark .button:visited:focus{color:#fff;background-color:#090a0f}}.hero-slider.generations{padding:20px 0 20px}
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-slider/_hero-slider.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/*---------------------------------
+		RWest Theme Variables
+-----------------------------------*/
+/*---------------------------------
+		RWest Theme Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Font Weights
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+.hero-slider {
+  max-width: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+@media only screen and (min-width: 641px) {
+  .hero-slider img.mobile-only, .hero-slider video.mobile-only {
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) and (min-height: 450px) {
+  .hero-slider {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .hero-slider {
+    max-height: 56.25rem;
+  }
+}
+.hero-slider .content {
+  position: relative;
+  z-index: 1;
+  max-width: 31.25rem;
+}
+@media only screen and (max-width: 640px) {
+  .hero-slider .content {
+    padding: 3.125rem 3.125rem 5rem 3.125rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 800px) {
+  .hero-slider .content {
+    bottom: 3.75rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .hero-slider .content {
+    max-width: 53.125rem;
+  }
+}
+.hero-slider .content * {
+  color: #090a0f;
+}
+.hero-slider .content h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+}
+.hero-slider .content h1.smaller {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+@media only screen and (max-width: 640px) {
+  .hero-slider .content h1.smaller {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .hero-slider .content h1 {
+    font-size: 2.25rem;
+    line-height: 1.35;
+    letter-spacing: 2px;
+  }
+}
+.hero-slider .content p {
+  margin: 1rem 0;
+}
+@media only screen and (min-width: 1025px) {
+  .hero-slider .content p {
+    max-width: 31.25rem;
+  }
+}
+.hero-slider .slider,
+.hero-slider .slick-list,
+.hero-slider .slick-track,
+.hero-slider .slick-slide,
+.hero-slider .slick-slide > div {
+  text-align: inherit;
+}
+@media only screen and (min-width: 641px) {
+  .hero-slider .slider,
+.hero-slider .slick-list,
+.hero-slider .slick-track,
+.hero-slider .slick-slide,
+.hero-slider .slick-slide > div {
+    height: 100% !important;
+  }
+}
+.hero-slider .slick-slide {
+  padding: 0;
+}
+.hero-slider .row {
+  max-width: none;
+  display: flex !important;
+  align-items: flex-end;
+  padding: 4.6875rem;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 640px) {
+  .hero-slider .row {
+    padding: 0;
+  }
+  .hero-slider .row .screen {
+    display: none;
+  }
+  .hero-slider .row img {
+    height: 35vh;
+    min-height: 12.5rem;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .hero-slider .row {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .hero-slider .row.bg-image {
+    background: none;
+    background-image: none !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .hero-slider .row.bg-image {
+    padding: 4.6875rem;
+  }
+}
+.hero-slider .align-right .columns {
+  text-align: right;
+}
+.hero-slider .align-right .columns p {
+  margin-right: 0;
+  margin-left: auto;
+}
+.hero-slider .align-center .columns {
+  text-align: center;
+}
+.hero-slider .align-center .columns p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-slider video {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+@media only screen and (min-width: 641px) {
+  .hero-slider video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    z-index: 1;
+    display: block;
+  }
+}
+
+.light * {
+  color: #fff;
+}
+
+@media only screen and (min-width: 641px) {
+  .dark * {
+    color: #090a0f;
+  }
+  .dark .button, .dark .button:visited {
+    border-color: #090a0f;
+    color: #090a0f;
+  }
+  .dark .button:hover, .dark .button:focus, .dark .button:visited:hover, .dark .button:visited:focus {
+    color: #fff;
+    background-color: #090a0f;
+  }
+}
+
+.hero-slider.generations {
+  padding: 20px 0 20px;
+}
 
 /*# sourceMappingURL=hero-slider.css.map*/
