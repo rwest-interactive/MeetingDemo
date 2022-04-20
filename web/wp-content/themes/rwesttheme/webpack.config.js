@@ -11,7 +11,6 @@
  const path = require('path')
 
  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
- const { CleanWebpackPlugin } = require('clean-webpack-plugin');
  const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
  /* ---------------
  * Main config
@@ -102,11 +101,9 @@ var configMain = Object.assign({}, config, {
     path: __dirname + "/build",
     publicPath: "/",
     filename: "main.js",
-    // clean: true,
   },
   plugins: [
-    // new RemoveEmptyScriptsPlugin(),
-    // new CleanWebpackPlugin(),
+    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: "main.css"
     })
@@ -120,11 +117,9 @@ var configEditor = Object.assign({}, config, {
     path: __dirname + "/build",
     publicPath: "/",
     filename: "editor.js",
-    // clean: true,
   },
   plugins: [
     new RemoveEmptyScriptsPlugin(),
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "editor.css"
     })
@@ -141,14 +136,13 @@ var configBlocks = Object.assign({}, config, {
   output: {
     path: __dirname + "/template-parts",
     publicPath: "/",
-    // filename: "js/app.admin.min.js"
     filename: './blocks/[name]/[name].js',
   },
   plugins: [
     new RemoveEmptyScriptsPlugin(), 
-      new MiniCssExtractPlugin({
-          filename: './blocks/[name]/[name].css',
-      })
+    new MiniCssExtractPlugin({
+        filename: './blocks/[name]/[name].css',
+    })
   ]
 });
  module.exports = [configMain, configBlocks, configEditor];
