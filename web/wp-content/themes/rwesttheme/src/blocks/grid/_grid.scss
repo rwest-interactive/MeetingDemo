@@ -1,0 +1,35 @@
+@import "../../settings/variables";
+.grid{
+  .grid-item{
+    padding-top: rem(30);
+    @include media-max($medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .grid-item-inner{
+      background-color: $light-gray-100;
+      margin: 0;
+      padding-top: rem(35);
+      padding-bottom: rem(20);
+
+      .columns{
+
+        a.title,
+        h3{
+          font-family: $font__main;
+          color: $black-primary;
+          font-size: 40px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          line-height: 1.25;
+          font-style: normal;
+        }
+        p{
+          font-family: $font__secondary;
+          color: $black-primary;
+        }
+      }
+    }
+  }
+}
+@import "theme";

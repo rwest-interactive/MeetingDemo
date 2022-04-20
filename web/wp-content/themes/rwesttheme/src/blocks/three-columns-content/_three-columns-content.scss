@@ -1,0 +1,15 @@
+@import "../../settings/variables";
+.wp-block {
+    max-width: 100%;
+}
+.three-columns-content.block {
+  .block-inner {
+    padding: rem(50);
+  }
+  @include media-max($medium) {
+    .columns {
+      padding-bottom: rem(40);
+    }
+  }
+}
+@import "theme";
